@@ -37,7 +37,7 @@ Resources:
               - "ec2.amazonaws.com"
           Action: sts:AssumeRole
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/CloudWatchFullAccess
+        - arn:aws:iam::aws:policy/CloudWatchFullAccessV2
       Tags:
         - Key: Name
           Value: !Ref AWS::StackName
@@ -97,7 +97,7 @@ Resources:
             nvm use v12.7.0
 
             # Download latest code, unzip it into /home/ec2-user/app
-            wget https://github.com/robert.f.ruff@gmail.com/aws-bootstrap/archive/master.zip 
+            wget https://github.com/robert-f-ruff/aws-bootstrap/archive/master.zip 
             unzip master.zip
             mv aws-bootstrap-master app
 
